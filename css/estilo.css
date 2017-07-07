@@ -1,0 +1,10 @@
+
+.button-container{
+	text-align: center;
+}
+
+@media screen and (max-width: 479px) {
+	.hide-cel {
+    	display: none;
+	}
+}
