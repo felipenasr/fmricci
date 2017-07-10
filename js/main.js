@@ -1,7 +1,7 @@
 // VARIÁVEIS GLOBIAS
+
+
 var treinadorPrincipal = {};
-
-
 
 // Funções gerais
 
