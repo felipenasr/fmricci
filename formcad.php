@@ -1,13 +1,13 @@
-<form id="form" action="autenticacao.php" method="get">
+<form id="form-cad" name="formcad" action="autenticacao.php" method="get">
 		<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">
-			<input required name="nome" class="mdl-textfield__input" type="text" id="nome-treinador" pattern="[a-zA-Z\sà-ùÀ-Ù,ä-ü,Ä-Ü]*" />
+			<input name="nome" class="mdl-textfield__input" type="text" id="nome-treinador" pattern="[a-zA-Z\sà-ùÀ-Ù,ä-ü,Ä-Ü]*" />
 
 			<label class="mdl-textfield__label" for="nome-treinador">Nome do Treinador</label>
 			<span class="mdl-textfield__error">Esse campo não pode ficar em branco!</span>
 		</div>
 
 		<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">
-			<input required name="data" class="mdl-textfield__input" type="text"	id="data-nascimento">
+			<input name="data" class="mdl-textfield__input" type="text" id="data-nascimento">
 			<label class="mdl-textfield__label" for="data-nascimento">Data da Nascimento</label>
 		</div>
 
@@ -45,6 +45,6 @@
 
 		<div class="button-container">
 
-			<button type="submit" value="Submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary mdl-button--raised">Confirma</button>
+			<button type="submit" value="Submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary mdl-button--raised" onclick="return validacaoDeCadastro();";>Confirma</button>
 		</div>
 	</form>

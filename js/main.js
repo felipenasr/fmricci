@@ -22,6 +22,10 @@ function dadosDoTreinador(){
 function ajustaNome (){
 	treinadorPrincipal.nome = treinadorPrincipal.nome.replace('+', ' ');
 }
-
+function validacaoDeCadastro(){
+	if(formcad.data.value != 1){
+		alert('refaça');
+	}
+}
 // aplicando mascaras jquery
 $('#data-nascimento').mask('00-00-0000');
