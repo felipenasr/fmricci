@@ -2,6 +2,7 @@
 
 
 var treinadorPrincipal = {};
+var vetorData = {};
 
 // Funções gerais
 
@@ -18,14 +19,13 @@ function dadosDoTreinador(){
 	    treinadorPrincipal[chave] = valor;
 	});
 }
-
 function ajustaNome (){
 	treinadorPrincipal.nome = treinadorPrincipal.nome.replace('+', ' ');
 }
 function validacaoDeCadastro(){
-	if(formcad.data.value != 1){
-		alert('refaça');
-	}
+	var teste = formcad.data.value;
+    vetorData = teste.split('-');
+    alert(vetorData);
 }
 // aplicando mascaras jquery
-$('#data-nascimento').mask('00-00-0000');
+$('#data-nascimento').mask('00-00-0000');⁠⁠⁠⁠
