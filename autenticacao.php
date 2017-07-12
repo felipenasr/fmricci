@@ -15,6 +15,6 @@
 	dadosDoTreinador();
 	ajustaNome ();
 
-	window.location.replace("/fm-maneger/fmricci");
+	window.location.replace("index.php");
 </script>
 
