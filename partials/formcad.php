@@ -3,7 +3,9 @@
 		<input name="nome" class="mdl-textfield__input" type="text" id="nome-treinador" pattern="[a-zA-Z\sà-ùÀ-Ù,ä-ü,Ä-Ü]*" />
 
 		<label class="mdl-textfield__label" for="nome-treinador">Nome do Treinador</label>
-		<span class="mdl-textfield__error">Esse campo não pode ficar em branco!</span>
+		<span class="mdl-textfield__error">Caracteres especiais não são aceitos neste campo</span>
+		<span class="erroNome"></span>
+
 	</div>
 
 	<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">

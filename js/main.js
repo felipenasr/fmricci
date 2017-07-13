@@ -42,7 +42,7 @@ function verificaAno(ano){
 
 
 function verificaMes(mes) {
-	if(mes> 12 ||mes < 0){
+	if(mes> 12 ||mes <= 0){
 	    return false;
     }else{
 		return true;
@@ -61,10 +61,23 @@ function verificaDiasMes(mes, ano){
 		return 30;
 	}
 }
+
+
 function validacaoDeCadastro(){
-	var teste = formcad.data.value;
+	var dataComposta = formcad.data.value;
+	var nomeUser = formcad.nome.value
 	valida = true;
-    vetorData = teste.split('-');
+    vetorData = dataComposta.split('-');
+	if (nomeUser == '') {
+		valida = false;
+		$('.erroNome').text('Campo obrigatório!');
+	}
+
+	if(dataComposta == ''){
+    	valida = false;
+		$('.erroData').text('Campo obrigatório!');
+	}
+    
 
     if(!(verificaAno(vetorData[2]))){
 		$('.erroData').text('Formato inválido!');
@@ -73,7 +86,7 @@ function validacaoDeCadastro(){
     if(!(verificaMes(vetorData[1]))){
     	$('.erroData').text('Formato inválido!');
     	valida = false;
-    }if(vetorData[0] > verificaDiasMes(vetorData[1], vetorData[2]) || vetorData[0]< 0){
+    }if(vetorData[0] > verificaDiasMes(vetorData[1], vetorData[2]) || vetorData[0]<= 0){
     	$('.erroData').text('Formato inválido!');
     	valida = false;
     }

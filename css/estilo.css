@@ -9,6 +9,13 @@
     margin-top: 3px;
     display: block;
 }
+.erroNome{
+    color: rgb(213,0,0);
+    position: absolute;
+    font-size: 12px;
+    margin-top: 3px;
+    display: block;
+}
 
 .button-container{
 	text-align: center;

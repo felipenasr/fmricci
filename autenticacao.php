@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="PT-br">
 
-	<?php include "head.php"; ?>
+	<?php include "partials/head.php"; ?>
 	<body>
-
-		<?php include "script.php" ?>
-
+		
+		
+		<?php include "partials/script.php" ?>
 	</body>
-
+		
 
 
 </html>
@@ -15,6 +15,6 @@
 	dadosDoTreinador();
 	ajustaNome ();
 
-	window.location.replace("index.php");
+	window.location.replace("game.php");
 </script>
 
