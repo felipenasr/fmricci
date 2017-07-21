@@ -1,19 +1,19 @@
-<form id="form-cad" name="formcad" action="autenticacao.php" method="get">
+<form>
 	<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">
-		<input name="nome" class="mdl-textfield__input" type="text" id="nome-treinador" pattern="[a-zA-Z\sà-ùÀ-Ù,ä-ü,Ä-Ü]*" />
+		<input class="mdl-textfield__input" type="text" id="nome-treinador" pattern="[a-zA-Z\sà-ùÀ-Ù,ä-ü,Ä-Ü]*" />
 
 		<label class="mdl-textfield__label" for="nome-treinador">Nome do Treinador</label>
 		<span class="mdl-textfield__error">Esse campo não pode ficar em branco!</span>
 	</div>
 
 	<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">
-		<input name="data" class="mdl-textfield__input" type="text" id="data-nascimento">
+		<input class="mdl-textfield__input" type="text" id="data-nascimento">
 		<label class="mdl-textfield__label" for="data-nascimento">Data da Nascimento(dd-mm-aaaa)</label>
 		<span class="erroData"></span>
 	</div>
 
 	<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">
-		<select required class="mdl-textfield__input" name="clubeTorce" id="clubeTorce">
+		<select class="mdl-textfield__input" id="clubeTorce">
 		  <option value="" disabled selected></option>
 		  <option value="botafogo">Botafogo</option>
 		  <option value="corinthians">Corinthians</option>
@@ -29,7 +29,7 @@
 	</div>
 
 	<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">
-		<select required class="mdl-textfield__input" name="clubeEscolhido" id="clubeEscolhido">
+		<select  class="mdl-textfield__input" id="clubeEscolhido">
 		  <option value="" disabled selected></option>
 		  <option value="botafogo">Botafogo</option>
 		  <option value="corinthians">Corinthians</option>
