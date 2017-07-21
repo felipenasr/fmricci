@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="PT-br">
-	<?php include "head.php"; ?>
+	<?php include "partials/head.php"; ?>
 	<body>
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-			<?php include "header.php"; ?>
-			<?php include "main.php" ?>
+			<?php include "partials/header.php"; ?>
+			
+
+			<?php include "partials/main.php" ?>
+			
 		</div>
 
-		<?php include "script.php" ?>
+		<?php include "partials/script.php" ?>
 	</body>
 </html>
