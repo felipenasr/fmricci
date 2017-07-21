@@ -10,11 +10,11 @@
 		selectors: document.querySelectorAll('select'),
 		button: document.querySelector('#submitCadastro')
 	};
-	console.log(uiLogin);
 
 	var validacaoDeCadastro = function(e){
 		e.preventDefault();
-		campos.forEach( function(element, index) {
+		uiLogin.campos.forEach( function(campo, index) {
+			console.log(campo.value);
 		});
 	};
 	var cadastro = function(){
