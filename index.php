@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="PT-br">
-	<?php include "partials/head.php"; ?>
+	<?php require_once "partials/head.php"; ?>
 	<body>
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-			<?php include "partials/header.php"; ?>
-			
+			<?php require_once "partials/header.php"; ?>
 
-			<?php include "partials/main.php" ?>
-			
+
+			<?php require_once "partials/main.php" ?>
+
 		</div>
 
-		<?php include "partials/script.php" ?>
+		<?php require_once "script.php" ?>
+
 	</body>
 </html>

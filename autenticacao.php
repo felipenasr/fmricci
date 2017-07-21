@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="PT-br">
 
-	<?php include "partials/head.php"; ?>
+	<?php require_once "partials/head.php"; ?>
 	<body>
 		
 		
-		<?php include "partials/script.php" ?>
+		<?php require_once "partials/script.php" ?>
 	</body>
 		
 

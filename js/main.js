@@ -77,7 +77,7 @@ function validacaoDeCadastro(){
     	valida = false;
 		$('.erroData').text('Campo obrigatório!');
 	}
-    
+
 
     if(!(verificaAno(vetorData[2]))){
 		$('.erroData').text('Formato inválido!');
@@ -92,4 +92,6 @@ function validacaoDeCadastro(){
     }
     return valida;
 }
+
+// aplicando mask
 $('#data-nascimento').mask('00-00-0000');

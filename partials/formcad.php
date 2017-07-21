@@ -1,4 +1,4 @@
-<form>
+<form >
 	<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">
 		<input class="mdl-textfield__input" type="text" id="nome-treinador" pattern="[a-zA-Z\sà-ùÀ-Ù,ä-ü,Ä-Ü]*" />
 
@@ -9,7 +9,7 @@
 	</div>
 
 	<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">
-		<input class="mdl-textfield__input" type="text" id="data-nascimento">
+		<input class="mdl-textfield__input data-campo" type="text" id="data-nascimento">
 		<label class="mdl-textfield__label" for="data-nascimento">Data da Nascimento(dd-mm-aaaa)</label>
 		<span class="erroData"></span>
 	</div>
@@ -48,6 +48,6 @@
 
 	<div class="button-container">
 
-		<button type="submit" value="Submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary mdl-button--raised" onclick="return validacaoDeCadastro();">Confirma</button>
+		<button type="submit" value="Submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary mdl-button--raised" id="submitCadastro">Confirma</button>
 	</div>
 </form>

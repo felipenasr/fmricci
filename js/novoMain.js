@@ -6,8 +6,18 @@
 (function  () {
 	// ui do login
 	var uiLogin ={
-		campos: $('input'),
-		selectors: $('selectors'),
+		campos: document.querySelectorAll('input'),
+		selectors: document.querySelectorAll('select'),
+		button: document.querySelector('#submitCadastro')
+	};
+	console.log(uiLogin);
 
-	}
+	var validacaoDeCadastro = function(e){
+		e.preventDefault();
+		campos.forEach( function(element, index) {
+		});
+	};
+	var cadastro = function(){
+    	uiLogin.button.addEventListener("click", validacaoDeCadastro);
+	}();
 })();
