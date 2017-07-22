@@ -4,14 +4,14 @@
 
 		<label class="mdl-textfield__label" for="nome-treinador">Nome do Treinador</label>
 		<span class="mdl-textfield__error">Caracteres especiais não são aceitos neste campo</span>
-		<span class="erroNome"></span>
+		<span class="nome-treinador errorinput"></span>
 
 	</div>
 
 	<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">
 		<input class="mdl-textfield__input data-campo" type="text" id="data-nascimento">
 		<label class="mdl-textfield__label" for="data-nascimento">Data da Nascimento(dd-mm-aaaa)</label>
-		<span class="erroData"></span>
+		<span class="data-nascimento errorinput"></span>
 	</div>
 
 	<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">
@@ -28,6 +28,7 @@
 		</select>
 
 		<label class="mdl-textfield__label" for="clubeTorce">Clube do Coração</label>
+		<span class="erro1 errorinput"></span>
 	</div>
 
 	<div class="mdl-textfield form-cadastro mdl-js-textfield mdl-textfield--floating-label">

@@ -2,14 +2,7 @@
 .form-cadastro{
 	width: 100% !important;
 }
-.erroData{
-    color: rgb(213,0,0);
-    position: absolute;
-    font-size: 12px;
-    margin-top: 3px;
-    display: block;
-}
-.erroNome{
+.errorinput{
     color: rgb(213,0,0);
     position: absolute;
     font-size: 12px;

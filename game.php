@@ -10,6 +10,3 @@
 		<?php require_once "partials/script.php" ?>
 	</body>
 </html>
-<script>
-	
-</script>

@@ -1,97 +1,46 @@
-// VARIÁVEIS GLOBIAS
+// escopo do cadastro
+// 1 - Autenticação dos dados
+// 2 - Tratamento dos dados
+// 3 - Gravação dos dados e encaminhamento para uma página com as informações printadas
 
+(function  () {
+	// ui do login
+	var uiLogin ={
+		campos: document.querySelectorAll('input'),
+		selectors: document.querySelectorAll('select'),
+		button: document.querySelector('#submitCadastro')
+	};
 
-var treinadorPrincipal = {};
-var vetorData = {};
+	var validacaoDeCadastro = function(e){
+		e.preventDefault();
+		var data = {};
+		var erros = 0;
+		uiLogin.campos.forEach( function(campo, index) {
+			if(campo.value.length===0){
+				$('.'+campo.id).text('Campo obrigatório!');
+				erros++;
+			}else{
+				data[campo.id] = campo.value;
+				$('.'+campo.id).text('');
+				if (campo.id=="data-nascimento") {
+					if(!verificaData(campo.value)){
+						$('.'+campo.id).text('Erro na data!');
+						erros++;
+					}
+				}
+			}
+		});
+		uiLogin.selectors.forEach(function(seletor, key){
+			if(seletor.value == ''){
+				$('#'+seletor.id).attr('require');
+				console.log(seletor.id);
 
-// Funções gerais
-
-
-function dadosDoTreinador(){
-
-	var query = location.search.slice(1);
-	var partes = query.split('&');
-
-	partes.forEach(function (parte) {
-	    var chaveValor = parte.split('=');
-	    var chave = chaveValor[0];
-	    var valor = chaveValor[1];
-	    treinadorPrincipal[chave] = valor;
-	});
-}
-function ajustaNome (){
-	treinadorPrincipal.nome = treinadorPrincipal.nome.replace('+', ' ');
-}
-
-
-function verificaAnoBissexto(ano){
-	if ( ( ano % 4 == 0 && ano % 100 != 0 ) || (ano % 400 == 0) ) {
-		return true;
-	}else{
-		return false;
-	}
-}
-
-function verificaAno(ano){
-	if(ano > 2010 || ano < 1900){
-		return false;
-	}else{
-		return true;
-	}
-}
-
-
-function verificaMes(mes) {
-	if(mes> 12 ||mes <= 0){
-	    return false;
-    }else{
-		return true;
-	}
-}
-function verificaDiasMes(mes, ano){
-	if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 ){
-		return 31;
-	}else if(mes == 2){
-		 if(verificaAnoBissexto(ano)){
-		 	return 29;
-		 }else{
-		 	return 28;
-		 }
-	}else{
-		return 30;
-	}
-}
-
-
-function validacaoDeCadastro(){
-	var dataComposta = formcad.data.value;
-	var nomeUser = formcad.nome.value
-	valida = true;
-    vetorData = dataComposta.split('-');
-	if (nomeUser == '') {
-		valida = false;
-		$('.erroNome').text('Campo obrigatório!');
-	}
-
-	if(dataComposta == ''){
-    	valida = false;
-		$('.erroData').text('Campo obrigatório!');
-	}
-
-
-    if(!(verificaAno(vetorData[2]))){
-		$('.erroData').text('Formato inválido!');
-    	valida = false;
-    }
-    if(!(verificaMes(vetorData[1]))){
-    	$('.erroData').text('Formato inválido!');
-    	valida = false;
-    }if(vetorData[0] > verificaDiasMes(vetorData[1], vetorData[2]) || vetorData[0]<= 0){
-    	$('.erroData').text('Formato inválido!');
-    	valida = false;
-    }
-    return valida;
-}
-
-// aplicando mask
-$('#data-nascimento').mask('00-00-0000');
+			}
+		});
+		// console.log(erros);
+		// console.log(data);
+	};
+	var cadastro = function(){
+    	uiLogin.button.addEventListener("click", validacaoDeCadastro);
+	}();
+})();
