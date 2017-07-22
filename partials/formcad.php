@@ -3,8 +3,7 @@
 		<input class="mdl-textfield__input" type="text" id="nomeTreinador" pattern="[a-zA-Z\sà-ùÀ-Ù,ä-ü,Ä-Ü]{10,32}" />
 
 		<label class="mdl-textfield__label" for="nomeTreinador">Nome do Treinador</label>
-		<span class="mdl-textfield__error"></span>
-		<span class="nomeTreinador errorinput"></span>
+		<span class="nomeTreinador errorinput">Minino 10, maximo 30 caracteres.</span>
 
 	</div>
 

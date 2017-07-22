@@ -7,6 +7,6 @@
 			<?php require_once "partials/header.php"; ?>
 		</div>
 
-		<?php require_once "partials/script.php" ?>
+		<?php require_once "script.php" ?>
 	</body>
 </html>

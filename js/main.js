@@ -36,19 +36,28 @@
 				$('.'+seletor.id).text('Campo obrigatório');
 			}
 			else{
+				data[seletor.id]=seletor.value;
 				$('.'+seletor.id).text('');
 			}
 		});
-		console.log(erros);
 		if(erros == 0 ){
-			console.log(data);
-		}else {
-			console.log('tem erros');
+			gravacaoDeDados(data);
 		}
+	};
 
-		// console.log(data);
+	var gravacaoDeDados= function(data){
+		localStorage.dadosTreinador = JSON.stringify(data);
+		window.location.replace('game.php');
 	};
 	var cadastro = function(){
-    	uiLogin.button.addEventListener("click", validacaoDeCadastro);
+		if(localStorage.dadosTreinador == undefined){
+    		uiLogin.button.addEventListener("click", validacaoDeCadastro);
+		}else{
+			var local = window.location.href;
+			local = local.replace(window.location.origin, '');
+			if(local == '/' || local=='/index.php'){
+				window.location.replace('game.php');
+			}
+		}
 	}();
 })();

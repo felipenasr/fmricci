@@ -8,7 +8,10 @@ function verificaAnoBissexto(ano){
 function verificaAno(ano){
 	if(ano > 2010 || ano < 1900){
 		return false;
-	}else{
+	}else if(ano == NaN || ano == undefined || ano == null){
+		return false;
+	}
+	else{
 		return true;
 	}
 }
@@ -16,6 +19,8 @@ function verificaAno(ano){
 
 function verificaMes(mes) {
 	if(mes> 12 ||mes <= 0){
+	    return false;
+    }else if(mes == NaN || mes == undefined || mes == null){
 	    return false;
     }else{
 		return true;
@@ -39,7 +44,11 @@ function verificaDiasMes(mes, ano){
 function verificaData(data){
 	var valida = true;
     var vetorData = data.split('-');
-
+    vetorData.forEach(function(valor, indice){
+    	if(valor == NaN || valor == null || valor == undefined){
+    		valida = false;
+    	}
+    })
     if(!(verificaAno(vetorData[2]))){
 		$('.erroData').text('Formato inválido!');
     	valida = false;
