@@ -22,7 +22,7 @@
 			}else{
 				data[campo.id] = campo.value;
 				$('.'+campo.id).text('');
-				if (campo.id=="data-nascimento") {
+				if (campo.id=="dataNascimento") {
 					if(!verificaData(campo.value)){
 						$('.'+campo.id).text('Erro na data!');
 						erros++;
@@ -32,12 +32,20 @@
 		});
 		uiLogin.selectors.forEach(function(seletor, key){
 			if(seletor.value == ''){
-				$('#'+seletor.id).attr('require');
-				console.log(seletor.id);
-
+				erros++;
+				$('.'+seletor.id).text('Campo obrigatório');
+			}
+			else{
+				$('.'+seletor.id).text('');
 			}
 		});
-		// console.log(erros);
+		console.log(erros);
+		if(erros == 0 ){
+			console.log(data);
+		}else {
+			console.log('tem erros');
+		}
+
 		// console.log(data);
 	};
 	var cadastro = function(){
