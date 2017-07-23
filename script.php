@@ -4,5 +4,3 @@
 <script type="text/javascript" src="js/jquery.mask.min.js"></script>
 <script type="text/javascript" src="js/dataTables.material.min.js"></script>
 <script type="text/javascript" src="js/verificacaodata.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/mascaras.js"></script>

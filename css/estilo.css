@@ -18,6 +18,9 @@
 	margin: auto;
 }
 
+.time{
+    text-transform: capitalize;
+}
 @media screen and (max-width: 479px) {
 	.hide-cel {
     	display: none;
