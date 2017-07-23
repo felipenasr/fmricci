@@ -11,7 +11,8 @@
 
 		</div>
 
+		<script type="text/javascript" src="js/dadosDoJogo.js"></script>
+		<script type="text/javascript" src="js/gravandoDados.js"></script>
 		<?php require_once "script.php" ?>
-
 	</body>
 </html>
