@@ -3,7 +3,9 @@
 // 2 - Tratamento dos dados
 // 3 - Gravação dos dados e encaminhamento para uma página com as informações printadas
 
-(function  () {
+var JOGO = (function (module) {
+	var box = module || {};
+
 	// ui do login
 	var uiLogin ={
 		campos: document.querySelectorAll('input'),
@@ -11,7 +13,9 @@
 		button: document.querySelector('#submitCadastro')
 	};
 
-	var validacaoDeCadastro = function(e){
+	box.ui = uiLogin;
+
+	box.validacaoDeCadastro = function(e){
 		e.preventDefault();
 		var data = {};
 		var erros = 0;
@@ -45,13 +49,14 @@
 		}
 	};
 
-	var gravacaoDeDados= function(data){
+	box.gravacaoDeDados= function(data){
 		localStorage.dadosTreinador = JSON.stringify(data);
 		window.location.replace('game.php');
 	};
+
 	var cadastro = function(){
 		if(localStorage.dadosTreinador == undefined){
-    		uiLogin.button.addEventListener("click", validacaoDeCadastro);
+    		uiLogin.button.addEventListener("click", box.validacaoDeCadastro);
 		}else{
 			var local = window.location.href;
 			local = local.replace(window.location.origin, '');
@@ -60,4 +65,6 @@
 			}
 		}
 	}();
-})();
+
+	return box;
+})(window.JOGO);
