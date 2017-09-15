@@ -14,7 +14,6 @@ function verificaAno(ano){
 	else{
 		return true;
 	}
-	
 }
 
 
